@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- 加入 Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-light sticky-top"
+    style="background-color: white; border: 5px solid; border-color: #ffc107; border-radius: 20px;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-5" href="#">Robot User List</a>
+      <!-- 重新整理 =>"javascript:location.reload()" -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active ms-5" aria-current="page" href="index.html">Home</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-5" href="favorite.html" id="favorite-link">Favorite</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="search-form">
+          <input class="form-control me-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-warning" id="search-button" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="flex-wrap d-flex justify-content-around" id="data-panel">
+
+      <!-- Card User -->
+      <!-- <div class="card m-2 border-3 border-warning rounded" id="userCard" style="width: 15rem;">
+      <div class="align-self-end m-3">
+        <a href="#" class="btn btn-light border-2 border-danger rounded">
+          <i class="fa-solid fa-heart text-danger"></i>
+        </a>
+      </div>
+      <img src="https://robohash.org/repellatvoluptateomnis.png?size=300x300&set=set1" class="card-img-top img-fluid" data-bs-toggle="modal" data-bs-target="#user-modal" alt="user-avatar" class="card-img-top" alt="user-image">
+      <div class="card-body flex-wrap d-flex justify-content-around">
+        <h5 class="card-title mt-2 text-center align-content-center">Robot Blue</h5>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <!-- Modal User -->
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-user-title">Robot Blue</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-user-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <img class="img-fluid" id="modal-user-img"
+                  src="https://robohash.org/repellatvoluptateomnis.png?size=300x300&set=set1" alt="">
+              </div>
+              <div class="col-sm-6 align-content-center" id="modal-user-info"">
+                <!-- render modal users data here -->
+
+                <!-- <li>Name: Tudor</li>
+                <li>Surname: Pogor</li>
+                <li>Email: tudor-pogor@example.com</li>
+                <li>Gender: male</li>
+                <li>Age: 29</li>
+                <li>Region: Romania</li> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" modal-footer">
+                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paginator -->
+        <nav aria-label="Page navigation example" style="pagination-color: #ffc107; pagination-border-color: #ffc107;">
+          <ul class="pagination justify-content-center" id="paginator">
+            <!-- render page here -->
+            <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+          </ul>
+        </nav>
+
+
+
+        <!-- 先引入 axios CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+        <!-- 再加入 Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+          crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/239b59e369.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
