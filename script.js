@@ -15,7 +15,6 @@ const favoriteLink = document.querySelector('#favorite-link')
 
 
 
-let isFavoritePage = false //用於標識當前是否在favorite頁面
 let currentPage = 1 //用於標識當前頁面
 
 
@@ -177,11 +176,7 @@ paginator.addEventListener('click', function onPaginatorClicked(event) {
   if (event.target.tagName !== 'A') return
   const page = Number(event.target.dataset.page)
   currentPage = page
-  if (isFavoritePage) {  // 如果是在favorite頁面的話，會是true
-    renderUserList(favoriteUsersByPage(page))
-  } else {
-    renderUserList(getUsersByPage(page))
-  }
+  renderUserList(getUsersByPage(page))
 })
 
 
